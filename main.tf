@@ -3,6 +3,6 @@ resource "aws_instance" "example" {
   instance_type = "t2.micro"
 
   tags = {
-    Name = "HELLO WORLD!"
+    Name = "HELLO WORLD!!"
   }
 }
