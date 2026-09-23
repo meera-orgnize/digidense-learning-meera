@@ -29,3 +29,6 @@ resource "aws_security_group" "lab" {
   name   = "lab-sg"
   vpc_id = aws_vpc.lab.id
 }
+
+# Test protected main
+
