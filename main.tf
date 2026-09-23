@@ -1,3 +1,5 @@
+
+
 # aws instance_creation
 
 resource "aws_instance" "example" {
@@ -13,7 +15,7 @@ resource "aws_instance" "example" {
 # creating aws_vpc
 
 resource "aws_vpc" "lab" {
-  cidr_block = "10.0.0.0/16"
+  ciidr_block = "10.0.0.0/16"
 }
 
 # creating aws_subnet
@@ -54,6 +56,7 @@ resource "aws_instance" "lab" {
   instance_type = "t2.micro"
 }
 
+<<<<<<< HEAD
 # creating s3 bucket
 
 resource "aws_s3_bucket" "lab" {
@@ -65,12 +68,5 @@ resource "aws_s3_bucket" "lab" {
 resource "aws_s3_bucket_versioning" "lab" {
   bucket = aws_s3_bucket.lab.id
 }
-# creating public access
 
-resource "aws_s3_bucket_public_access_block" "lab" {
-  bucket = aws_s3_bucket.lab.id
-}
 
-resource "aws_s3_bucket_lifecycle_configuration" "lab" {
-  bucket = aws_s3_bucket.lab.id
-}i
