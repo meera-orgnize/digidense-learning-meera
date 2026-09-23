@@ -30,5 +30,10 @@ resource "aws_security_group" "lab" {
   vpc_id = aws_vpc.lab.id
 }
 
+# creating aws_internet_gateway
+
+resource "aws_internet_gateway" "lab" {
+  vpc_id = aws_vpc.lab.id
+}
 # Test protected main
 
