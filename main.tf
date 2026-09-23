@@ -59,4 +59,9 @@ resource "aws_instance" "lab" {
 resource "aws_s3_bucket" "lab" {
   bucket = "git-lab-demo-bucket"
 }
-i
+
+# creating bucket versioning
+
+resource "aws_s3_bucket_versioning" "lab" {
+  bucket = aws_s3_bucket.lab.id
+}i
