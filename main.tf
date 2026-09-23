@@ -37,3 +37,40 @@ resource "aws_internet_gateway" "lab" {
 }
 # Test protected main
 
+# creating aws_route_table
+
+resource "aws_route_table" "lab" {
+  vpc_id = aws_vpc.lab.id
+
+  tags = {
+    Name = "corrected-route"
+  }
+}
+
+#creating aws ec2
+
+resource "aws_instance" "lab" {
+  ami           = "ami-dummy"
+  instance_type = "t2.micro"
+}
+
+# creating s3 bucket
+
+resource "aws_s3_bucket" "lab" {
+  bucket = "git-lab-demo-bucket"
+}
+
+# creating bucket versioning
+
+resource "aws_s3_bucket_versioning" "lab" {
+  bucket = aws_s3_bucket.lab.id
+}
+# creating public access
+
+resource "aws_s3_bucket_public_access_block" "lab" {
+  bucket = aws_s3_bucket.lab.id
+}
+
+resource "aws_s3_bucket_lifecycle_configuration" "lab" {
+  bucket = aws_s3_bucket.lab.id
+}i
