@@ -69,4 +69,8 @@ resource "aws_s3_bucket_versioning" "lab" {
 
 resource "aws_s3_bucket_public_access_block" "lab" {
   bucket = aws_s3_bucket.lab.id
+}
+
+resource "aws_s3_bucket_lifecycle_configuration" "lab" {
+  bucket = aws_s3_bucket.lab.id
 }i
