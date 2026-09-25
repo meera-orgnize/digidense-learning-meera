@@ -74,3 +74,6 @@ resource "aws_s3_bucket_versioning" "lab" {
 resource "aws_iam_user" "lab_user" {
 name = "lab-user"
 }
+
+resource "aws_s3_bucket" "example" {
+  bucket = "git-lab-demo-bucket"
