@@ -77,3 +77,8 @@ name = "lab-user"
 
 resource "aws_s3_bucket" "example" {
   bucket = "git-lab-demo-bucket"
+}
+
+resource "aws_s3_bucket" "example" {
+  bucket = "company-production-bucket"
+}
