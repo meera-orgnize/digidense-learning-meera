@@ -69,4 +69,8 @@ resource "aws_s3_bucket_versioning" "lab" {
   bucket = aws_s3_bucket.lab.id
 }
 
+# creating iam user
 
+resource "aws_iam_user" "lab_user" {
+name = "lab-user"
+}
