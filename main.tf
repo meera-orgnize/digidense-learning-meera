@@ -1,5 +1,8 @@
+
+# creating s3 bucket
 resource "aws_s3_bucket" "example" {
-  bucket = "git-lab-demo-bucket"
+  bucket = "digidense-production-bucket"
+}
 
 # aws instance_creation
 
