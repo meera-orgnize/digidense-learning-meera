@@ -63,8 +63,8 @@ resource "aws_instance" "lab" {
 <<<<<<< HEAD
 # creating s3 bucket
 
-resource "aws_s3_bucket" "lab" {
-  bucket = "git-lab-demo-bucket"
+resource "aws_s3_bucket" "example" {
+  bucket = "digidense-production-bucket"
 }
 
 # creating bucket versioning
@@ -79,6 +79,4 @@ resource "aws_iam_user" "lab_user" {
 name = "lab-user"
 }
 
-resource "aws_s3_bucket" "example" {
-  bucket = "digidense-production-bucket"
-}
+
