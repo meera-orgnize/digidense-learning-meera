@@ -60,8 +60,9 @@ resource "aws_instance" "lab" {
   instance_type = "t2.micro"
 }
 
+<<<<<<< HEAD
 # creating s3 bucket
-I
+
 resource "aws_s3_bucket" "example" {
   bucket = "digidense-production-bucket"
 }
@@ -78,25 +79,4 @@ resource "aws_iam_user" "lab_user" {
 name = "lab-user"
 }
 
-#terraform
-terraform {
-  required_providers {
-    aws = {
-      source = "hashicorp/aws"
-    }
-  }
-}
-
-provider "aws" {
-  region = "us-east-1"
-}
-
-resource "aws_instance" "app_server" {
-  ami           = "ami-12345678"
-  instance_type = "t2.micro"
-
-  tags = {
-    Name = "Lab-Server"
-  }
-}
 
